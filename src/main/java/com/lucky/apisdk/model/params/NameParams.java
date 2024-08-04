@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * @author lucky
  * @date 2024/4/28
- * @description
+ * @description 名称参数
  */
 @Data
 @Accessors(chain = true)

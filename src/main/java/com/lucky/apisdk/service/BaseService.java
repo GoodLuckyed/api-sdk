@@ -37,7 +37,8 @@ public abstract class BaseService implements ApiService{
      * 网关HOST
      */
     //TODO 临时值
-    private String gatewayHost = "https://gateway.qimuu.icu/api";
+//    private String gatewayHost = "https://gateway.qimuu.icu/api";
+    private String gatewayHost = "http://localhost:8090/api";
 
     /**
      * 通用请求
@@ -92,7 +93,7 @@ public abstract class BaseService implements ApiService{
         // 执行请求，获取响应数据
         HttpResponse httpResponse = doRequest(request);
         String body = httpResponse.body();
-        HashMap<String, Object> data = new HashMap<>();
+        Map<String, Object> data = new HashMap<>();
         if (httpResponse.getStatus() != 200){
             ErrorResponse errorResponse = JSONUtil.toBean(body, ErrorResponse.class);
             data.put("errorMessage",errorResponse.getMessage());

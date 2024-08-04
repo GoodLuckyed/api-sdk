@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 /**
  * @author lucky
  * @date 2024/4/28
- * @description
+ * @description 名称响应
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
